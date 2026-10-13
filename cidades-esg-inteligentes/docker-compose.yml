@@ -1,0 +1,36 @@
+services:
+  app-staging:
+    build: .
+    container_name: cidades-esg-staging
+    environment:
+      SERVER_PORT: 8080
+      DB_PASSWORD: ${DB_PASSWORD:-}
+      SPRING_PROFILES_ACTIVE: staging
+    ports:
+      - "8081:8080"
+    volumes:
+      - staging-data:/data
+    networks:
+      - esg-network
+
+  app-production:
+    build: .
+    container_name: cidades-esg-production
+    environment:
+      SERVER_PORT: 8080
+      DB_PASSWORD: ${DB_PASSWORD:-}
+      SPRING_PROFILES_ACTIVE: production
+    ports:
+      - "8080:8080"
+    volumes:
+      - production-data:/data
+    networks:
+      - esg-network
+
+volumes:
+  staging-data:
+  production-data:
+
+networks:
+  esg-network:
+    driver: bridge

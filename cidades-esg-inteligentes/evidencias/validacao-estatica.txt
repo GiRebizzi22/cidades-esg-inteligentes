@@ -1,0 +1,15 @@
+VALIDACAO ESTATICA DO PROJETO - CIDADES ESG INTELIGENTES
+==========================================================
+[OK] pom.xml: Arquivo Maven presente
+[OK] POM XML: XML válido
+[OK] GitHub Actions YAML: Workflow YAML válido
+[OK] Docker Compose YAML: Compose YAML válido
+[OK] Dockerfile: Presente
+[OK] .env.example: Presente
+[OK] README.md: Presente
+[OK] src/main/java/br/com/esg/cidades/CidadesEsgApplication.java: Presente
+[OK] src/test/java/br/com/esg/cidades/CidadesEsgApplicationTests.java: Presente
+[OK] src/main/resources/static/index.html: Presente
+
+Observacao: build Maven, containers Docker e GitHub Actions nao foram executados neste ambiente.
+A validacao acima confirma estrutura e sintaxe dos arquivos XML/YAML principais.

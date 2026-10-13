@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cidades ESG Inteligentes</title>
+<style>
+:root{--bg:#f4f7f5;--card:#fff;--ink:#17312a;--muted:#6a7b75;--green:#207a5a;--light:#dff2e9;--border:#dce5e1}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(135deg,#123e31,#2a8b66);color:#fff;padding:36px 0}.wrap{width:min(1100px,92%);margin:auto}
+h1{margin:0 0 8px;font-size:34px}.sub{opacity:.88;margin:0}.badge{display:inline-block;background:#dff2e9;color:#15543e;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:bold;margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}.metric,.panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 3px 12px rgba(0,0,0,.04)}
+.metric b{font-size:25px;display:block;margin-top:6px}.metric span{color:var(--muted);font-size:13px}.panel h2{margin-top:0}.bar{height:9px;background:#e8efec;border-radius:20px;overflow:hidden}.fill{height:100%;background:#2a8b66}.cities{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.city h3{margin:0 0 4px}.state{color:var(--muted);font-size:13px}.row{display:flex;justify-content:space-between;margin:11px 0 5px;font-size:13px}.api{font-family:monospace;background:#10251f;color:#c7f5df;border-radius:10px;padding:14px;overflow:auto;font-size:13px}
+footer{color:var(--muted);font-size:12px;padding:25px 0 35px}.status{display:flex;gap:8px;align-items:center}.dot{width:9px;height:9px;border-radius:50%;background:#31b777}
+@media(max-width:800px){.grid,.cities{grid-template-columns:1fr 1fr}}@media(max-width:520px){.grid,.cities{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Cidades ESG Inteligentes</h1><p class="sub">Painel de indicadores ambientais, sociais e de governança urbana.</p><div class="badge">Projeto acadêmico DevOps • Spring Boot</div></div></header>
+<main class="wrap">
+<section class="grid">
+<div class="metric"><span>Cidades monitoradas</span><b id="count">3</b></div>
+<div class="metric"><span>Média sustentabilidade</span><b>84,7</b></div>
+<div class="metric"><span>Energia renovável média</span><b>71%</b></div>
+<div class="metric"><span>Reciclagem média</span><b>59%</b></div>
+</section>
+<section class="panel"><div class="status"><span class="dot"></span><b>API REST preparada</b></div><p style="color:var(--muted)">Endpoints de cadastro, consulta e remoção de cidades, com persistência H2 e execução containerizada.</p><div class="api">GET /api/cidades &nbsp; POST /api/cidades &nbsp; GET /api/cidades/{id} &nbsp; DELETE /api/cidades/{id}</div></section>
+<h2>Cidades de demonstração</h2>
+<section class="cities" id="cities">
+<div class="panel city"><h3>Curitiba</h3><div class="state">Paraná</div><div class="row"><span>Sustentabilidade</span><b>88,5</b></div><div class="bar"><div class="fill" style="width:88.5%"></div></div><div class="row"><span>Energia renovável</span><b>76%</b></div><div class="bar"><div class="fill" style="width:76%"></div></div><div class="row"><span>Reciclagem</span><b>64%</b></div><div class="bar"><div class="fill" style="width:64%"></div></div></div>
+<div class="panel city"><h3>São Paulo</h3><div class="state">São Paulo</div><div class="row"><span>Sustentabilidade</span><b>81,2</b></div><div class="bar"><div class="fill" style="width:81.2%"></div></div><div class="row"><span>Energia renovável</span><b>68%</b></div><div class="bar"><div class="fill" style="width:68%"></div></div><div class="row"><span>Reciclagem</span><b>52%</b></div><div class="bar"><div class="fill" style="width:52%"></div></div></div>
+<div class="panel city"><h3>Florianópolis</h3><div class="state">Santa Catarina</div><div class="row"><span>Sustentabilidade</span><b>84,4</b></div><div class="bar"><div class="fill" style="width:84.4%"></div></div><div class="row"><span>Energia renovável</span><b>69%</b></div><div class="bar"><div class="fill" style="width:69%"></div></div><div class="row"><span>Reciclagem</span><b>61%</b></div><div class="bar"><div class="fill" style="width:61%"></div></div></div>
+</section>
+<footer>Ambientes previstos: staging (porta 8081) e produção (porta 8080) • CI/CD: GitHub Actions • Orquestração: Docker Compose</footer>
+</main>
+</body></html>
